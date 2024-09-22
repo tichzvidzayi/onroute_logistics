@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
 import DriverList from "./components/DriverList";
 import Search from "./components/Search";
+import "./index.css";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
