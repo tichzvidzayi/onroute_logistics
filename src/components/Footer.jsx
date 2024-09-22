@@ -7,6 +7,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Logistics UK. All rights reserved.
       </p>
       <hr className="border-red-600 border-4 my-4" />
+      <i> Designed by @Tich</i>
     </footer>
   );
 };

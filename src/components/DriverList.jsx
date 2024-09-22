@@ -1,7 +1,6 @@
 import driverData from '../data/drivers.json';
 
 const DriverList = ({ searchQuery }) => {
-  // Helper function to calculate activity totals by type
   const calculateTotalsByType = (activities) => {
     const totals = {
       drive: 0,
@@ -19,11 +18,8 @@ const DriverList = ({ searchQuery }) => {
     return totals;
   };
 
-  // Helper function to check if there is activity for a specific day
   const hasActivityForDay = (traces, day) => 
     traces ? traces.some(trace => new Date(trace.date).getDay() === day && trace.activity.length > 0) : false;
-
-  // Filter drivers based on the search query
   const filteredDrivers = driverData.data.filter(driver =>
     driver.forename.toLowerCase().includes(searchQuery.toLowerCase()) ||
     driver.vehicleRegistration.toLowerCase().includes(searchQuery.toLowerCase())
@@ -35,7 +31,7 @@ const DriverList = ({ searchQuery }) => {
         <thead>
           <tr>
             <th className="px-4 py-2">Driver Name</th>
-            <th className="px-4 py-2">Vehicle Reg</th>
+            <th className="px-4 py-2">Vehicle Reg#</th>
             <th className="px-4 py-2">Total Drive</th>
             <th className="px-4 py-2">Total Rest</th>
             <th className="px-4 py-2">Total Work</th>

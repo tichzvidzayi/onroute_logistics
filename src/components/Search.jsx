@@ -10,7 +10,8 @@ const Search = ({ searchQuery, setSearchQuery }) => {
       type="text"
       value={searchQuery}
       onChange={handleChange}
-      placeholder="Search drivers..."
+      placeholder="Search by Name or Reg number"
+     className="w-84 p-2 border border-gray-300 rounded"
     />
   );
 };
