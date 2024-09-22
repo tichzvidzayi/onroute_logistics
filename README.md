@@ -1,4 +1,4 @@
-# Logistics UK Driver and Menu Listing Application
+# Logistics_site 
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -26,27 +26,26 @@ This project is a React application designed to list drivers and menu items from
 
 # Installation and Setup
 
-## Clone repo
+### Clone repo
  ```bash
-   git clone https://github.com/your-username/logistics_site.git
-
-## Navigate to folder
+   git clone https://github.com/tichzvidzayi/logistics_site.git
+```
+### Navigate to folder
  ```bash
 cd logistics_site
-
-## Run
+```
+### Install dependencies and run logistics_site App
   ```bash
 npm install
+```
   ```bash
 npm start
-
-
-
+```
 
 ## Folder Structure
 
 ```bash
-.
+
 ├── public/               # Public static assets e.g logo.png
 ├── src/
 │   ├── components/       # Header.jsx, SideMenu.jsx, DriverList.jsx, Search)
@@ -61,3 +60,19 @@ npm start
 ├── tailwind.config.js    # TailwindCSS config
 ├── .gitignore            # Ignore files (node_modules/)
 └── README.md             # Project documentation
+```
+
+## Future Considerations
+
+- Include a LogIn/SignUp capabilities
+- Manage vehicles and drivers (CRUD operations)
+ - Consider server server-side -rendering (SSR) 
+- Use TypeScript to add static typic e.g. 
+``` bash
+type Driver = {
+  name: string;
+  registration: string;
+  activityMinutes: number;
+  days: string[];
+};
+```
