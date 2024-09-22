@@ -13,14 +13,10 @@ const App = () => {
   return (
     <Router>
       <div className="min-h-screen flex">
-        {/* Sidebar with navigation */}
         <SideMenu />
 
-        {/* Main content */}
         <div className="flex-1">
           <Header />
-
-          {/* Content container */}
           <div className="p-4">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -35,5 +31,4 @@ const App = () => {
     </Router>
   );
 };
-
 export default App;

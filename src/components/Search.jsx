@@ -11,7 +11,7 @@ const Search = ({ searchQuery, setSearchQuery }) => {
       value={searchQuery}
       onChange={handleChange}
       placeholder="Search by Name or Reg number"
-     className="w-84 p-2 border border-gray-300 rounded"
+      className="w-64 p-2 border border-gray-300 rounded"
     />
   );
 };

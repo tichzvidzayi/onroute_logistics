@@ -36,6 +36,7 @@ const DriverList = ({ searchQuery }) => {
             <th className="px-4 py-2">Total Rest</th>
             <th className="px-4 py-2">Total Work</th>
             <th className="px-4 py-2">Total Available</th>
+            
             {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
               <th className="px-4 py-2" key={day}>{day}</th>
             ))}
