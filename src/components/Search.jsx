@@ -1,12 +1,18 @@
-const Search = ({ searchQuery, setSearchQuery }) => (
+import React from 'react';
+
+const Search = ({ searchQuery, setSearchQuery }) => {
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  return (
     <input
       type="text"
-      className="border p-2 w-full"
-      placeholder="Search for Driver"
       value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
+      onChange={handleChange}
+      placeholder="Search drivers..."
     />
   );
-  
-  export default Search;
-  
+};
+
+export default Search;

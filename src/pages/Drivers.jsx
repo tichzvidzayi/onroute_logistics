@@ -1,11 +1,17 @@
-import React from 'react';
-import DriverList from '../components/DriverList'; // Assuming DriverList is in components
+import React, { useState } from 'react';
+import Search from '../components/Search';
+import DriverList from '../components/DriverList';
+import useDebounce from '../hooks/useDebounce';
 
 const Drivers = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const debouncedSearchQuery = useDebounce(searchQuery, 300); // 300ms delay
+
   return (
     <div>
-      <h1>Drivers Page</h1>
-      <DriverList searchQuery="" />
+      {/* Search and filter drivers */}
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <DriverList searchQuery={debouncedSearchQuery} />
     </div>
   );
 };
