@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import SideMenu from "./components/SideMenu";
+import DriverList from "./components/DriverList";
+import Search from "./components/Search";
 
-function App() {
+const App = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex">
+      <SideMenu />
+      <div className="flex-1">
+        <Header />
+        <div className="p-4">
+          <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <DriverList searchQuery={searchQuery} />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
