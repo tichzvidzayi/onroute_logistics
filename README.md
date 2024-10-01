@@ -11,7 +11,6 @@
 
 ## Project Overview
 This project is a React application designed to list drivers and menu items from provided JSON data files. It allows users to:
-
 - View a list of drivers with details about their weekly activity.
 - View menu items from a data file.
 - Search for drivers by name or vehicle registration.
