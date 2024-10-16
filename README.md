@@ -27,7 +27,7 @@ This project is a React application designed to list drivers and menu items from
 
 ### Clone repo
  ```bash
-   git clone https://github.com/tichzvidzayi/logistics_site.git
+   git clone https://github.com/tichzvidzayi/onroute_logistics.git
 ```
 ### Navigate to folder
  ```bash
